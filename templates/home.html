@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Mind - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using a fallback background color */
+            background-color: #e0e8f0; 
+        }
+        .font-brand {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* --- MODIFIED CSS --- */
+        .main-bg {
+            position: relative;
+            background-image: url("{% static 'Generated Image September 19, 2025 - 3_45PM 1.png' %}");
+            
+            /* Switched back to cover for a full-screen feel */
+            background-size: cover;
+            
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="bg-[#8aa3a1]/90 backdrop-blur-sm text-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="{% url 'home' %}" class="flex items-center space-x-2">
+                <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h1 class="font-brand text-3xl">Safe Mind</h1>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="hover:text-gray-200 transition-colors">Features</a>
+                <a href="{% url 'about_us' %}" class="hover:text-gray-200 transition-colors">About us</a>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="relative flex-grow flex flex-col items-center justify-center text-center main-bg text-slate-800 p-4">
+        <div class="absolute inset-0 bg-black/10"></div>
+        
+        <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-8">
+            
+            <a href="{% url 'login' %}" class="group bg-white/40 backdrop-blur-md py-4 px-10 rounded-full text-2xl font-semibold text-slate-800 shadow-lg hover:bg-white/60 transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center space-x-3">
+                <span>Get start</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            
+            <div class="flex flex-col items-center">
+                <h2 class="font-brand text-7xl text-slate-800 text-shadow">Safe Mind</h2>
+                <p class="text-slate-700 mt-2 text-lg">Shattering stigma, nurturing hope</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-[#8aa3a1]/90 backdrop-blur-sm text-white py-6">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <a href="{% url 'about_us' %}" class="text-xl font-semibold mb-4 md:mb-0 hover:text-gray-200">Contact us</a>
+            <div class="flex space-x-5">
+                <a href="#" class="hover:text-gray-200 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                <a href="#" class="hover:text-gray-200 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                <a href="#" class="hover:text-gray-200 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                <a href="#" class="hover:text-gray-200 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

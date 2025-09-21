@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Mind - Article</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e9eff5;
+        }
+        .font-brand {
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-slate-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h1 class="font-brand text-3xl text-slate-800">Safe Mind</h1>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="notes.html" class="hover:text-slate-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </a>
+                <a href="home.html" class="font-semibold hover:text-slate-600 transition-colors">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <img src="https://placehold.co/600x400/d1e0e0/4a5568?text=Illustration" alt="Doctor illustration" class="rounded-lg shadow-md w-full h-full object-cover">
+            <img src="https://placehold.co/600x400/d1e0e0/4a5568?text=Illustration" alt="Brain illustration" class="rounded-lg shadow-md w-full h-full object-cover">
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-12">
+            <!-- Context -->
+            <section>
+                <h2 class="text-3xl font-bold mb-2">Context</h2>
+                <ul class="list-disc list-inside space-y-1 text-slate-700">
+                    <li>Why Mental Health Matters</li>
+                    <li>Common Challenges Youth Face</li>
+                    <li>Wellness Strategies for youth</li>
+                    <li>Solutions for Better Youth Mental Health</li>
+                    <li>Mental Health Resources and Helplines</li>
+                </ul>
+            </section>
+            
+            <p class="text-slate-600 leading-relaxed">
+                Mental wellness is the foundation of living a balanced, fulfilling and resilient life. It is not just the absence of mental illness, but a state of wellbeing in which an individual realizes their own abilities, can cope with the normal stresses of life, can work productively and is able to make a contribution to their community. Prioritizing mental wellness means nurturing yourself every day through positive thinking, self-compassion, healthy relationships, and engaging activities that bring you joy and purpose. Breaking the stigma surrounding mental health is crucial. It encourages open conversations, seeking help without fear of judgment and fostering a supportive community where everyone feels safe to share their struggles. Remember, it's okay not to be okay and taking the first step to seek help is a sign of strength.
+            </p>
+
+            <!-- Why Mental Health Matters -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Why Mental Health Matters</h2>
+                <p class="mb-3 text-slate-600">Mental health is as important as physical health. For young people, it plays a key role in forming healthy relationships and preparing for the future. Good mental health allows youth to:</p>
+                <ul class="list-disc list-inside space-y-1 text-slate-600">
+                    <li>Cope with stress and adversity</li>
+                    <li>Develop resilience and self-esteem</li>
+                    <li>Achieve personal and academic goals</li>
+                </ul>
+            </section>
+
+            <!-- Common Challenges -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Common Challenges Youth Face</h2>
+                <p class="text-slate-600 mb-6">Youth today face various stressors that can impact their mental health.</p>
+                <div class="space-y-6">
+                    <div>
+                        <p><strong>Depression</strong> - Persistent sadness, low energy, or loss of interest in activities.</p>
+                        <img src="https://placehold.co/600x200/d1e0e0/4a5568?text=Illustration" alt="Depression illustration" class="rounded-lg mt-2 w-full">
+                    </div>
+                    <div>
+                        <p><strong>Loneliness</strong> - Feeling isolated, even when surrounded by people.</p>
+                        <img src="https://placehold.co/600x200/d1e0e0/4a5568?text=Illustration" alt="Loneliness illustration" class="rounded-lg mt-2 w-full">
+                    </div>
+                    <div>
+                        <p><strong>Stigma</strong> - Fear of being judged for talking about mental health struggles.</p>
+                        <img src="https://placehold.co/600x200/d1e0e0/4a5568?text=Illustration" alt="Stigma illustration" class="rounded-lg mt-2 w-full">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Wellness Strategies -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Wellness Strategies for youth</h2>
+                <p class="text-slate-600 mb-6">Proactive steps can help build stronger mental wellness every day:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-4 bg-white rounded-lg shadow"><p><strong>Prioritize Rest:</strong> A healthy sleep routine improves mood.</p></div>
+                    <div class="p-4 bg-white rounded-lg shadow"><p><strong>Eat Well & Stay Active:</strong> Nutrition and physical activity boost mental clarity.</p></div>
+                    <div class="p-4 bg-white rounded-lg shadow"><p><strong>Practice Mindfulness:</strong> Meditation or journaling can calm the mind and reduce stress.</p></div>
+                    <div class="p-4 bg-white rounded-lg shadow"><p><strong>Stay Connected:</strong> Talking with friends, family, or mentors builds support systems.</p></div>
+                    <div class="p-4 bg-white rounded-lg shadow"><p><strong>Seek Help:</strong> A professional, teacher, or trusted adult can guide through tough times.</p></div>
+                </div>
+            </section>
+
+            <!-- Solutions -->
+            <section>
+                <h2 class="text-2xl font-bold mb-4">Solutions for Better Youth Mental Health</h2>
+                <p class="text-slate-600 leading-relaxed">Creating supportive environments is key. Schools can implement mental health programs and peer support clubs. Parents can foster open communication and model healthy coping strategies. Communities can offer accessible, youth-friendly mental health services. Online platforms can provide valuable information and anonymous support. Policy changes that integrate mental health into primary care can also make a significant difference. It's about building a web of support that surrounds young people at home, school, and in their community, making it easier for them to thrive and seek help when needed.</p>
+            </section>
+
+            <!-- Breaking the Stigma -->
+            <section>
+                 <h2 class="text-2xl font-bold mb-4">Breaking the Stigma</h2>
+                 <p class="text-slate-600 leading-relaxed">Ending the stigma around mental health and wellness is the role of everyone. Mental health is not a weakness - it's part of the human experience. Share your story, listen to others, and advocate for better resources. In vulnerability, we find strength.</p>
+            </section>
+            
+            <!-- Resources -->
+            <section>
+                <div class="flex items-center space-x-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-rose-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <h2 class="text-2xl font-bold">Mental Health Resources and Helplines</h2>
+                </div>
+                <p class="text-slate-600 mb-4">India has several confidential and free resources for mental health support:</p>
+                <ul class="space-y-2 text-slate-600">
+                    <li><strong>NIMHANS Helpline:</strong> 080-46110007 (Mental health support, 24/7)</li>
+                    <li><strong>iCALL Psychosocial Helpline:</strong> Available via phone, email, and chat app, (Mon-Sat)</li>
+                    <li><strong>KIRAN National Helpline:</strong> 1800-599-0019</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-12 pb-6">
+        <div class="container mx-auto px-6 text-center text-slate-700 space-y-4">
+            <div class="flex flex-col items-center">
+                 <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h2 class="font-brand text-5xl mt-2">Safe Mind</h2>
+                <p class="text-slate-600 mt-1">Shattering stigma, nurturing hope</p>
+            </div>
+            <div class="border-t border-slate-300 pt-4">
+                 <a href="#" class="text-slate-600 hover:underline">Contact us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

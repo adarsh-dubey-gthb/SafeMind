@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Mind - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e9eff5;
+        }
+        .font-brand {
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-[#8aa3a1]/90 backdrop-blur-sm text-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="home.html" class="flex items-center space-x-2">
+                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h1 class="font-brand text-3xl">Safe Mind</h1>
+            </a>
+            <a href="{% url 'home1' %}" class="font-semibold hover:text-gray-200 transition-colors">Back</a>        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold mb-8 text-center">About us</h1>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-2/3 space-y-4 text-slate-700 leading-relaxed">
+                    <p>Safe Mind is dedicated to promoting youth mental wellness by offering trustworthy information, practical wellness strategies, and essential mental health resources. We provide clear explanations about how the human mind works, common mental health conditions, and the challenges young people face today. Our goal is to educate and empower youth to recognize signs of mental health struggles and take proactive steps towards emotional wellbeing.</p>
+                    <p>We offer guidance on coping techniques, stress management, and how to support oneself or others during mental health crises. Our platform also shares wellness strategies including mindfulness, healthy routines, and seeking professional help when needed. Additionally, we provide access to critical mental health helplines and resources to ensure immediate support is available.</p>
+                     <p>At Safe Mind, we believe in breaking the stigma surrounding mental health by encouraging open conversations and fostering a compassionate community. Our content is thoughtfully created to inspire hope and resilience, helping youth lead healthier, happier lives.</p>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <img src= "{% static '3a63e6e6de9a3b18239fbccc6ecd684a 1.png'%}" alt="Founder avatar" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+         <div class="py-10 text-center text-slate-700 space-y-4">
+            <div class="flex flex-col items-center">
+                 <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h2 class="font-brand text-5xl mt-2">Safe Mind</h2>
+                <p class="text-slate-600 mt-1">Shattering stigma, nurturing hope</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-white">
+            <div class="container mx-auto py-6 px-6 flex flex-col md:flex-row justify-center items-center text-center space-y-4 md:space-y-0 md:space-x-6">
+                 <h3 class="text-lg font-semibold">Contact us</h3>
+                 <div class="flex space-x-4">
+                    <a href="#" class="hover:text-gray-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" class="hover:text-gray-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="#" class="hover:text-gray-300 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                 </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

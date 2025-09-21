@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Mind - My Sanctuary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e9eff5;
+        }
+        .font-brand {
+            font-family: 'Dancing Script', cursive;
+        }
+        .sanctuary-bg {
+            background-image: url('https://images.unsplash.com/photo-1558509313-a7ac33850125?q=80&w=1935&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-[#8aa3a1] text-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href={% url 'home1'%} class="flex items-center space-x-2">
+                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 R0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h1 class="font-brand text-3xl">Safe Mind</h1>
+            </a>
+            <a a href="{%  url 'home1' %}" class="px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors">
+                Back
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <!-- Page Title -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                <h2 class="text-xl font-semibold text-slate-700">My Sanctuary</h2>
+            </div>
+            <button class="text-slate-600 hover:text-slate-900">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+        </div>
+
+        <!-- Welcome Card -->
+        <div class="relative rounded-2xl shadow-lg overflow-hidden mb-6">
+            <div class="absolute inset-0 sanctuary-bg"></div>
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="relative p-8 text-white">
+                <h1 class="text-4xl font-bold">Good morning, there!</h1>
+                <button class="mt-4 px-6 py-2 bg-white/30 backdrop-blur-sm rounded-full hover:bg-white/40 transition">
+                    Your streak
+                </button>
+            </div>
+        </div>
+        <p class="text-center text-slate-600 italic mb-8">"Let your morning be a gentle reminder progress begins with self-care, and every day is a new opportunity to nurture your mind and spirit."</p>
+
+        <!-- Mood Check Section -->
+        <div class="space-y-4">
+            <button class="w-full sm:w-auto mx-auto sm:mx-0 flex justify-center px-6 py-2 bg-white rounded-full shadow font-medium">Mood check</button>
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex justify-around items-center mb-4">
+                    <!-- Happy -->
+                    <button class="flex flex-col items-center space-y-1 text-slate-600 hover:text-slate-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5-2 4-2 4 2 4 2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                        <span>Happy</span>
+                    </button>
+                    <!-- Sad -->
+                    <button class="flex flex-col items-center space-y-1 text-slate-600 hover:text-slate-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><circle cx="12" cy="12" r="10"></circle><path d="M16 16s-1.5-2-4-2-4 2-4 2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                        <span>Sad</span>
+                    </button>
+                    <!-- Angry -->
+                    <button class="flex flex-col items-center space-y-1 text-slate-600 hover:text-slate-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><circle cx="12" cy="12" r="10"></circle><path d="M16 16s-1.5-2-4-2-4 2-4 2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                        <span>Angry</span>
+                    </button>
+                    <!-- Add -->
+                    <button class="flex flex-col items-center space-y-1 text-slate-600 hover:text-slate-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                        <span>Add</span>
+                    </button>
+                </div>
+                <textarea class="w-full h-24 p-3 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8aa3a1]" placeholder="Write about your mood..."></textarea>
+                <div class="flex justify-end mt-4">
+                    <button class="px-6 py-2 bg-white rounded-full shadow-md font-semibold text-slate-700 hover:bg-gray-50 transition">Save</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent Button -->
+        <div class="mt-8 text-center">
+            <button class="inline-flex items-center space-x-3 px-8 py-3 border border-gray-400 rounded-full text-slate-700 hover:bg-gray-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                <span>Recent</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10">
+        <div class="container mx-auto px-6 text-center text-slate-700">
+            <div class="flex flex-col items-center">
+                 <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/></svg>
+                <h2 class="font-brand text-5xl mt-2">Safe Mind</h2>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

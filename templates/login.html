@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Mind Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-brand {
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+</head>
+<body class="bg-[#e0e8f0] flex items-center justify-center min-h-screen">
+
+    <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg max-w-sm w-full overflow-hidden">
+        <div class="relative h-48">
+            <img src="https://images.unsplash.com/photo-151862173GHGh15-f3b1c41bfd00?q=80&w=1887&auto=format&fit=crop" 
+                 alt="Floral background" 
+                 class="w-full h-full object-cover"
+                 onerror="this.onerror=null;this.src='https://placehold.co/400x192/f0e4e9/a28d95?text=Image+Not+Found';">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                 <div class="bg-white/30 backdrop-blur-md p-4 rounded-2xl flex items-center space-x-2">
+                    <svg class="w-10 h-10 text-slate-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A3 3 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A3 3 0 1 1 12 18Z"/><path d="M15 13a3 3 0 1 0-6 0"/><path d="M12 18v2"/><path d="M12 3V1"/><path d="m4.5 4.5 1 1"/><path d="m18.5 4.5-1 1"/><path d="m7.5 21 1-1"/><path d="m16.5 21-1-1"/><circle cx="12" cy="12" r="1"/><circle cx="16" cy="12" r="1"/><circle cx="8" cy="12" r="1"/><circle cx="12" cy="16" r="1"/><circle cx="12" cy="8" r="1"/></svg>
+                    <h1 class="font-brand text-4xl text-slate-800">Safe Mind</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-8 pt-6">
+            <form action="{% url 'login' %}" method="POST" class="space-y-4">
+                {% csrf_token %}
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <input type="email" name="email" placeholder="Email" class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#b2d8d8] focus:border-transparent transition">
+                </div>
+                
+                <div class="relative">
+                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                         <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <input type="password" name="password" placeholder="Password" class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-[#b2d8d8] focus:border-transparent transition">
+                </div>
+
+                <div class="text-right">
+                    <a href="#" class="text-sm text-gray-600 hover:text-gray-800 transition">Forgot Password</a>
+                </div>
+
+                <button type="submit" class="w-full bg-[#b2d8d8] text-gray-800 font-semibold py-3 rounded-xl shadow-md hover:bg-[#a1c9c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#b2d8d8] transition-colors">
+                    Login
+                </button>
+            </form>
+
+            <div class="my-6 flex items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="mx-4 text-sm text-gray-500">Or login with</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <button class="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition">
+                    <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                </button>
+                <button class="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition">
+                    <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                </button>
+                <button class="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition">
+                    <svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 24 24"><path d="M17.58 15.68c-.35-.18-.72-.28-1.13-.28-.75 0-1.55.31-2.23.91l-.23.2-.2-.23c-.34-.4-.75-.73-1.2-.98-.45-.25-.94-.38-1.45-.38-.97 0-1.88.42-2.58 1.12-.67.67-1.09 1.57-1.12 2.54h11.97c-.02-1.25-.51-2.42-1.3-3.28zM12.01 4.2c1.47 0 2.57 1.01 3.23 1.01.71 0 2.15-1.21 3.29-1.21 1.01 0 2.3.93 2.3 2.58 0 1.9-1.25 3.19-2.3 3.19-.61 0-1.89-1.02-3.3-1.02-.73 0-2.11 1.22-3.23 1.22-1.12 0-2.25-.93-2.25-2.58 0-1.89 1.23-3.19 2.25-3.19z"/></svg>
+                </button>
+            </div>
+
+            <div class="mt-6 text-center text-sm text-gray-600">
+                <span>Don't have an account?</span>
+                <a href="{% url 'signup' %}" class="font-semibold text-gray-800 hover:underline">Sign Up</a>
+            </div>
+            
+            <div class="mt-4 text-center">
+                <!-- CORRECTED: This is now a link to our new demo_login URL -->
+                <a href="{% url 'demo_login' %}" class="inline-flex items-center space-x-2 text-sm text-gray-700 font-medium hover:text-black transition">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Demo Account</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
