@@ -1,0 +1,11 @@
+# .gcloudignore
+
+.gcloudignore
+.git
+.gitignore
+
+# Local database file
+db.sqlite3
+
+# Python virtual environment
+venv/
